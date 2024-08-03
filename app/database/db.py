@@ -1,4 +1,4 @@
-users = {}
+users = []
 
 teams = {
     "1": {
