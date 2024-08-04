@@ -4,6 +4,7 @@ from flask_smorest import Api
 from resources.team import blp as TeamBlueprint
 from resources.player import blp as PlayerBlueprint
 from resources.user import blp as UserBlueprint
+from resources.game import blp as GameBlueprint
 
 
 app = Flask(__name__)
@@ -23,4 +24,5 @@ api = Api(app)
 api.register_blueprint(TeamBlueprint)
 api.register_blueprint(PlayerBlueprint)
 api.register_blueprint(UserBlueprint)
+api.register_blueprint(GameBlueprint)
 

@@ -1,5 +1,9 @@
 users = []
 
+
+games = {}
+
+
 teams = {
     "1": {
         "city": "Chicago",
