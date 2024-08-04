@@ -21,6 +21,6 @@ class Player(MethodView):
 class PlayerList(MethodView):
     def get(self, team_id):
         try:
-            return {k:v for k, v in players.items() if v["team_id"] == int(team_id)}
+            return {k:v for k, v in players.items() if v["team_id"] == team_id}
         except KeyError:
             abort(404, message="Team not found.")   

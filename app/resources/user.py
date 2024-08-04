@@ -8,7 +8,7 @@ blp = Blueprint("users", __name__, description="Operations on users.")
 
 @blp.route("/users")
 class User(MethodView):
-    def post(self):
+    def get(self):
         return {"users": users}
 
 
