@@ -28,8 +28,8 @@ SELECT
     ELSE
         typedropback
     END AS drop_back,
-	presnapvisitorscore AS presnap_away_score,
-	presnaphomescore AS presnap_home_score,
+	presnapvisitorscore AS away_score,
+	presnaphomescore AS home_score,
 	gameclock as clock,
 	penaltycodes as penalties,
 	penaltyjerseynumbers as players_flagged,

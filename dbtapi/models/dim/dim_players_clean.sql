@@ -1,5 +1,5 @@
 WITH src_players AS (
-	SELECT * FROM public.players
+	SELECT * FROM {{ ref('src_players') }}
 )
 SELECT 
 	playerid AS player_id,
