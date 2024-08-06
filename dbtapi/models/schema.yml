@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_plays_clean
+    columns:
+      - name: quarter
+        tests:
+          - not_null
+
+      - name: down
+        tests:
+          - not_null
+
+      - name: game_id
+        tests:
+          - relationships:
+              to: ref('dim_games_clean')
+              field: game_id

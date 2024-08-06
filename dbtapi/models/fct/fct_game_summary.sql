@@ -20,11 +20,11 @@ SELECT
 FROM
     src_plays join src_games 
 	on src_games.game_id = src_plays.game_id
+{% if is_incremental() %}
+    WHERE game_date > (select max(game_date) from {{ this }})
+{% endif %}
 GROUP BY 
     src_plays.game_id,
     src_games.game_date,
     src_games.home,
     src_games.away
-{% if is_incremental() %}
-    WHERE game_date > (select max(game_date) from {{ this }})
-{% endif %}
