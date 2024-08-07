@@ -2,16 +2,20 @@ version: 2
 
 models:
   - name: dim_plays_clean
+    description: Clean table with valid play data.
     columns:
       - name: quarter
+        description: Quarter in current game in which play occurred.
         tests:
           - not_null
 
       - name: down
+        description: Offensive down at the start of current play.
         tests:
           - not_null
 
       - name: game_id
+        description: Unique identifier for each game.
         tests:
           - relationships:
               to: ref('dim_games_clean')
